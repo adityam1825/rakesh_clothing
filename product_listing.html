@@ -1,0 +1,521 @@
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rakesh Cloth Store - Men's Collection</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9A3412", // Warm Earthy Rust
+                        "primary-hover": "#7C2D12",
+                        "background-light": "#FAFAF9", // Very warm light grey
+                        "background-dark": "#0C0A09",
+                        "surface-dark": "#1C1917",
+                        "surface-light": "#FFFFFF",
+                        "border-light": "#E7E5E4",
+                        "border-dark": "#292524",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "system-ui", "sans-serif"],
+                        "body": ["Inter", "system-ui", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "none": "0",
+                        "sm": "0.375rem",
+                        "DEFAULT": "0.5rem",
+                        "md": "0.75rem",
+                        "lg": "1rem", 
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'card': '0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04)',
+                        'card-hover': '0 0 0 1px rgba(154, 52, 18, 0.1), 0 8px 24px -4px rgba(0, 0, 0, 0.1)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D6D3D1; 
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #44403C; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9A3412; 
+        }input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #9A3412;
+            cursor: pointer;
+            margin-top: -6px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-stone-100 font-display min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-border-light dark:border-border-dark bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-xl px-4 py-3 lg:px-8 transition-colors duration-300">
+<div class="mx-auto flex max-w-[1440px] items-center justify-between gap-6">
+<div class="flex items-center gap-4 shrink-0">
+<a class="flex items-center gap-3 group" href="#">
+<div class="flex items-center justify-center size-10 lg:size-11 rounded-lg bg-stone-900 dark:bg-white text-white dark:text-stone-900 shadow-xl shadow-stone-900/10 transition-transform group-hover:scale-105 duration-300">
+<svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 4v16"></path>
+<path d="M7 4h6a4 4 0 0 1 0 8H7"></path>
+<path d="M13 12l5 8"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<h1 class="text-xl lg:text-2xl font-black tracking-tight leading-none text-stone-900 dark:text-white uppercase group-hover:text-primary transition-colors">Rakesh</h1>
+<span class="text-[10px] lg:text-[11px] font-bold tracking-[0.3em] text-primary uppercase leading-tight mt-0.5">Clothing</span>
+</div>
+</a>
+</div>
+<div class="hidden md:flex flex-1 max-w-lg mx-6">
+<div class="relative w-full group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-primary transition-colors material-symbols-outlined text-[20px]">search</span>
+<input class="w-full rounded-full bg-stone-100 dark:bg-stone-900/50 py-2.5 pl-11 pr-4 text-sm font-medium text-stone-900 dark:text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white dark:focus:bg-black border border-transparent focus:border-primary/50 transition-all shadow-inner" placeholder="Search for Shirts, Jeans, Kurtas..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2 sm:gap-6">
+<nav class="hidden xl:flex gap-8 text-sm font-semibold tracking-wide">
+<a class="relative py-1 hover:text-primary transition-colors text-stone-600 dark:text-stone-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all duration-300" href="#">Casual</a>
+<a class="relative py-1 hover:text-primary transition-colors text-stone-600 dark:text-stone-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all duration-300" href="#">Formal</a>
+<a class="relative py-1 hover:text-primary transition-colors text-stone-600 dark:text-stone-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all duration-300" href="#">Ethnic</a>
+<a class="relative py-1 hover:text-primary transition-colors text-stone-600 dark:text-stone-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all duration-300" href="#">Accessories</a>
+</nav>
+<div class="h-6 w-px bg-stone-200 dark:bg-stone-700 hidden xl:block"></div>
+<div class="flex gap-3">
+<button class="flex size-10 items-center justify-center rounded-full border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-colors text-stone-600 dark:text-stone-400">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-colors text-stone-600 dark:text-stone-400">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="relative flex size-10 items-center justify-center rounded-full bg-primary text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span class="absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full bg-stone-900 dark:bg-white text-[10px] font-bold text-white dark:text-stone-900 border-2 border-white dark:border-stone-900">2</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-3 md:hidden flex w-full">
+<div class="relative w-full">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 material-symbols-outlined text-[20px]">search</span>
+<input class="w-full rounded-lg bg-stone-100 dark:bg-stone-900 py-2.5 pl-11 pr-4 text-sm font-medium text-stone-900 dark:text-white placeholder-stone-500 focus:outline-none focus:ring-1 focus:ring-primary border-none" placeholder="Search men's collection..." type="text"/>
+</div>
+</div>
+</header>
+<main class="mx-auto flex w-full max-w-[1440px] flex-1 flex-col gap-8 px-4 py-8 md:flex-row lg:px-8 xl:px-12">
+<aside class="w-full md:w-64 lg:w-72 flex-shrink-0 hidden md:flex flex-col gap-6">
+<div class="flex items-center justify-between pb-2 border-b border-stone-200 dark:border-stone-800">
+<h3 class="text-lg font-bold text-stone-900 dark:text-white tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+                Filters
+            </h3>
+<button class="text-xs font-semibold text-primary hover:text-primary-hover uppercase tracking-wider">Clear All</button>
+</div>
+<div class="flex flex-col gap-5">
+<details class="group open" open="">
+<summary class="flex cursor-pointer items-center justify-between py-1 font-bold text-sm uppercase tracking-wide marker:content-none text-stone-800 dark:text-stone-200 hover:text-primary transition-colors select-none">
+<span>Category</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-open:rotate-180 text-stone-400">expand_more</span>
+</summary>
+<div class="flex flex-col gap-2.5 pt-4 animate-in slide-in-from-top-2 duration-200">
+<label class="flex items-center gap-3 cursor-pointer group/item select-none">
+<div class="relative flex items-center">
+<input checked="" class="peer h-4 w-4 rounded border-stone-300 dark:border-stone-600 text-primary focus:ring-primary/20 bg-transparent checked:bg-primary transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="text-sm text-stone-600 dark:text-stone-400 group-hover/item:text-stone-900 dark:group-hover/item:text-white transition-colors">Casual Shirts</span>
+<span class="ml-auto text-xs text-stone-400">(42)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group/item select-none">
+<input class="peer h-4 w-4 rounded border-stone-300 dark:border-stone-600 text-primary focus:ring-primary/20 bg-transparent checked:bg-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="text-sm text-stone-600 dark:text-stone-400 group-hover/item:text-stone-900 dark:group-hover/item:text-white transition-colors">Formal Trousers</span>
+<span class="ml-auto text-xs text-stone-400">(18)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group/item select-none">
+<input class="peer h-4 w-4 rounded border-stone-300 dark:border-stone-600 text-primary focus:ring-primary/20 bg-transparent checked:bg-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="text-sm text-stone-600 dark:text-stone-400 group-hover/item:text-stone-900 dark:group-hover/item:text-white transition-colors">Jeans &amp; Denim</span>
+<span class="ml-auto text-xs text-stone-400">(35)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group/item select-none">
+<input class="peer h-4 w-4 rounded border-stone-300 dark:border-stone-600 text-primary focus:ring-primary/20 bg-transparent checked:bg-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="text-sm text-stone-600 dark:text-stone-400 group-hover/item:text-stone-900 dark:group-hover/item:text-white transition-colors">Ethnic Wear</span>
+<span class="ml-auto text-xs text-stone-400">(29)</span>
+</label>
+</div>
+</details>
+<div class="h-px bg-stone-200 dark:bg-stone-800"></div>
+<details class="group open" open="">
+<summary class="flex cursor-pointer items-center justify-between py-1 font-bold text-sm uppercase tracking-wide marker:content-none text-stone-800 dark:text-stone-200 hover:text-primary transition-colors select-none">
+<span>Size</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-open:rotate-180 text-stone-400">expand_more</span>
+</summary>
+<div class="grid grid-cols-4 gap-2 pt-4">
+<label class="cursor-pointer group/size">
+<input class="peer sr-only" type="checkbox"/>
+<span class="flex h-9 w-full items-center justify-center rounded-md border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-xs font-bold text-stone-600 dark:text-stone-400 hover:border-primary hover:text-primary peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">S</span>
+</label>
+<label class="cursor-pointer group/size">
+<input class="peer sr-only" type="checkbox"/>
+<span class="flex h-9 w-full items-center justify-center rounded-md border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-xs font-bold text-stone-600 dark:text-stone-400 hover:border-primary hover:text-primary peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">M</span>
+</label>
+<label class="cursor-pointer group/size">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<span class="flex h-9 w-full items-center justify-center rounded-md border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-xs font-bold text-stone-600 dark:text-stone-400 hover:border-primary hover:text-primary peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">L</span>
+</label>
+<label class="cursor-pointer group/size">
+<input class="peer sr-only" type="checkbox"/>
+<span class="flex h-9 w-full items-center justify-center rounded-md border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-xs font-bold text-stone-600 dark:text-stone-400 hover:border-primary hover:text-primary peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">XL</span>
+</label>
+</div>
+</details>
+<div class="h-px bg-stone-200 dark:bg-stone-800"></div>
+<div class="py-1">
+<div class="flex justify-between items-center mb-4">
+<span class="font-bold text-sm uppercase tracking-wide text-stone-800 dark:text-stone-200">Price Range</span>
+</div>
+<div class="px-1">
+<div class="relative h-1.5 w-full rounded-full bg-stone-200 dark:bg-stone-700">
+<div class="absolute left-[10%] right-[30%] h-full rounded-full bg-primary"></div>
+<div class="absolute left-[10%] top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary bg-white shadow-md cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"></div>
+<div class="absolute right-[30%] top-1/2 h-5 w-5 translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary bg-white shadow-md cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"></div>
+</div>
+<div class="mt-5 flex justify-between items-center text-sm font-semibold text-stone-700 dark:text-stone-300">
+<span class="bg-stone-100 dark:bg-stone-800 px-2 py-1 rounded">₹200</span>
+<span class="text-stone-400">-</span>
+<span class="bg-stone-100 dark:bg-stone-800 px-2 py-1 rounded">₹2,500</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto rounded-lg bg-stone-100 dark:bg-stone-900/50 p-4 border border-stone-200 dark:border-stone-800">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<div>
+<h4 class="font-bold text-sm text-stone-900 dark:text-white">Authentic Quality</h4>
+<p class="text-xs text-stone-500 mt-1 leading-relaxed">Every item is hand-picked for quality and comfort.</p>
+</div>
+</div>
+</div>
+</aside>
+<section class="flex flex-1 flex-col">
+<div class="mb-8 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 p-4 text-center text-white shadow-lg flex flex-col sm:flex-row items-center justify-center gap-3 border border-stone-700 relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 skew-x-12"></div>
+<span class="material-symbols-outlined text-orange-400">local_shipping</span>
+<span class="text-sm font-semibold tracking-wide">Free Shipping on orders above <span class="text-orange-400 font-bold">₹999</span></span>
+<span class="hidden sm:inline text-stone-600">|</span>
+<span class="text-sm font-medium text-stone-300">Easy Returns within 7 Days</span>
+</div>
+<div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-stone-900 dark:text-white">Men's Premium Collection</h2>
+<p class="mt-1 text-sm font-medium text-stone-500 dark:text-stone-400">Showing <span class="text-stone-900 dark:text-white font-bold">1-6</span> of 124 curated styles</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="md:hidden flex h-10 items-center gap-2 rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 px-4 text-sm font-bold shadow-sm text-stone-700 dark:text-stone-200">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filters
+                </button>
+<div class="relative group z-10">
+<button class="flex h-10 items-center gap-2 rounded-lg bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 text-sm font-bold text-stone-700 dark:text-white hover:border-primary transition-all shadow-sm">
+<span class="text-stone-400 font-normal">Sort by:</span>
+<span>Recommended</span>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+<article class="group relative flex flex-col rounded-lg bg-white dark:bg-surface-dark border border-stone-200 dark:border-stone-800 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-stone-200">
+<img alt="Man wearing a blue casual shirt" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpHfUyAtwCeB2UWImsbbl2O7kYepB9dwwByY2ChlSYmq_FeySTeENWA_ET_VGIHIiIo-59CTkqDeBiHCduJq1oar8KZEFqOevipGKqW4vWIk-imtojatdkgCW_U1UL_aywLgScofL1Z_I2SafK0z_AYy-Ch0ZXD2yuCgJZbGdh7c4NH5W7tyfqnIfoCFmxnjB23CF443ihtAwU2J1X8J1Z8eDS7E5GddhS2FpOhwzPLoPJ_D1VIb_puvu7F6LpWiHlvK7mE6t-WFU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<span class="absolute left-3 top-3 rounded bg-primary px-2 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-sm">20% OFF</span>
+<button class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm text-stone-400 hover:text-red-500 hover:scale-110 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-3">
+<h3 class="truncate text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary transition-colors">Casual Blue Linen Shirt</h3>
+<p class="text-xs font-medium text-stone-500 dark:text-stone-400 mt-1">Premium Cotton Blend</p>
+</div>
+<div class="mb-5 flex items-baseline gap-2">
+<span class="text-xl font-black text-stone-900 dark:text-white">₹799</span>
+<span class="text-sm font-medium text-stone-400 line-through">₹999</span>
+</div>
+<div class="mt-auto">
+<div class="mb-4 flex gap-2">
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">S</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded bg-stone-900 dark:bg-white text-white dark:text-stone-900 text-xs font-bold shadow-md">M</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">L</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">XL</span>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-stone-900 dark:bg-white py-3 text-xs font-bold tracking-widest text-white dark:text-stone-900 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-all shadow-lg shadow-stone-900/10 hover:shadow-primary/25 uppercase">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col rounded-lg bg-white dark:bg-surface-dark border border-stone-200 dark:border-stone-800 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-stone-200">
+<img alt="Man wearing a white t-shirt and dark jacket" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNunAgH8rdg1MJKoLgC97wHbxKCxqXsTSss2BAy3woNQ5cwjsXPxFCXfC5ZQMLOUnKeQwgWCvBHrxQtNzTn6pFql0KALBk7Pyz3prmf65JSYz9z34sM1v9n0wvfYmJEdEXIKq7yJU44ww1GvibcxTE7p53Ci1B1llC7EpUDVcg1TAETN4qGTzfGhR593TUTfyS2-o7AlU9sSOJTof2yFJl3_sEirnK6BxNmUVVeXA22_JdHMKnAXzTbzohFXrZ_YPRLMWXlYtOdXQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<span class="absolute left-3 top-3 rounded bg-white/90 backdrop-blur px-2 py-1 text-[10px] font-bold tracking-wider text-stone-900 uppercase shadow-sm border border-stone-100">New Arrival</span>
+<button class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm text-stone-400 hover:text-red-500 hover:scale-110 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-3">
+<h3 class="truncate text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary transition-colors">Urban Black Denim Jacket</h3>
+<p class="text-xs font-medium text-stone-500 dark:text-stone-400 mt-1">Heavyweight Denim</p>
+</div>
+<div class="mb-5 flex items-baseline gap-2">
+<span class="text-xl font-black text-stone-900 dark:text-white">₹1,499</span>
+</div>
+<div class="mt-auto">
+<div class="mb-4 flex gap-2">
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">M</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">L</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded bg-stone-900 dark:bg-white text-white dark:text-stone-900 text-xs font-bold shadow-md">XL</span>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-stone-900 dark:bg-white py-3 text-xs font-bold tracking-widest text-white dark:text-stone-900 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-all shadow-lg shadow-stone-900/10 hover:shadow-primary/25 uppercase">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col rounded-lg bg-white dark:bg-surface-dark border border-stone-200 dark:border-stone-800 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-stone-200">
+<img alt="Man wearing a classic white polo t-shirt" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcJktRzozbdqKWtD2YBZKzhtp3HVN8AC6o3Kv0QLH-7kFQtma9v0pW9RD2nFfQK3hR3w-j2Vf3H2Y9vtGOg363Ul8lrIbocSAN1jQk83-abHSKtgjDDmLNVmKd34qbPUn-OuJtL3rmp22xMae64r-OGMNu7zh6oFtjVAcdDoTeYdM5cW_fb_SBKqDehN0EooXLyNCf25q8ZUNkejDidkpThZmaqoJCLIBu4w9E-CQTY2dnUAvWw15fhF6Tt2Mcj5OT-nqzGSlUl7M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm text-primary hover:text-primary hover:scale-110 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px] fill-current">favorite</span>
+</button>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-3">
+<h3 class="truncate text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary transition-colors">Classic White Polo</h3>
+<p class="text-xs font-medium text-stone-500 dark:text-stone-400 mt-1">100% Cotton Pique</p>
+</div>
+<div class="mb-5 flex items-baseline gap-2">
+<span class="text-xl font-black text-stone-900 dark:text-white">₹599</span>
+<span class="text-sm font-medium text-stone-400 line-through">₹799</span>
+</div>
+<div class="mt-auto">
+<div class="mb-4 flex gap-2">
+<span class="flex size-7 cursor-pointer items-center justify-center rounded bg-stone-900 dark:bg-white text-white dark:text-stone-900 text-xs font-bold shadow-md">S</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">M</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">L</span>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-stone-900 dark:bg-white py-3 text-xs font-bold tracking-widest text-white dark:text-stone-900 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-all shadow-lg shadow-stone-900/10 hover:shadow-primary/25 uppercase">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col rounded-lg bg-white dark:bg-surface-dark border border-stone-200 dark:border-stone-800 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-stone-200">
+<img alt="Folded pile of casual chinos" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWLyOG5P2FKB5CCP1-iywRL80-Mua5ij30J6-_A4WDMgopAkfM-B3olIs4Pb8uQdaL1mmzrCvgSSv9g0Ir6ojSTeqQSpqxvsNUX4Fwf8gu9-EZKd2e1tgX4Eo07p-4or4qLoUDUKyRa8x_oa5Xs3QlS2fZvSRNp8NWfexKnOTOE48QH5LNOpSqzrQoASiMgTN9nacSdiXykWRr0J7K40ck_PBOqAEAXUTx2Sm4fZ-vDl_y1CyaP6BKktjXhYV_SkxPzxbBNRgOtAs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<span class="absolute left-3 top-3 rounded bg-orange-500 px-2 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-sm">Trending</span>
+<button class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm text-stone-400 hover:text-red-500 hover:scale-110 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-3">
+<h3 class="truncate text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary transition-colors">Slim Fit Beige Chinos</h3>
+<p class="text-xs font-medium text-stone-500 dark:text-stone-400 mt-1">Stretchable Fabric</p>
+</div>
+<div class="mb-5 flex items-baseline gap-2">
+<span class="text-xl font-black text-stone-900 dark:text-white">₹1,199</span>
+</div>
+<div class="mt-auto">
+<div class="mb-4 flex gap-2">
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">30</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded bg-stone-900 dark:bg-white text-white dark:text-stone-900 text-xs font-bold shadow-md">32</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">34</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">36</span>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-stone-900 dark:bg-white py-3 text-xs font-bold tracking-widest text-white dark:text-stone-900 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-all shadow-lg shadow-stone-900/10 hover:shadow-primary/25 uppercase">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col rounded-lg bg-white dark:bg-surface-dark border border-stone-200 dark:border-stone-800 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-stone-200">
+<img alt="Detailed shot of a patterned festive kurta" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKEh5CsjOuNPZ3hj30qPiPbziX78BGUVSuQW__2mgtbUAgxl95T-duh_bWthCZJ022VALhtvdxDXjFPiSplprtnU044hMVxZh0BBkdj_ng7YAm8hb6WIgCNxYZxRQwUjsilOpe5Ibu4r5fW0h4-dMHzMK7zJIS-wJQSQoYFSpwtMQTgD1Uzs98cU2ZTNqXoIpSnyPZnM0fWHubzsyOLxldaNPF2UbI37KIoYZHy3kgYFcqWwIEXUaSC2dws1eIh6pja1Ji6P1xtdA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<span class="absolute left-3 top-3 rounded bg-red-600 px-2 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-sm">50% OFF</span>
+<button class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm text-stone-400 hover:text-red-500 hover:scale-110 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-3">
+<h3 class="truncate text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary transition-colors">Festive Silk Kurta</h3>
+<p class="text-xs font-medium text-stone-500 dark:text-stone-400 mt-1">Traditional Wear</p>
+</div>
+<div class="mb-5 flex items-baseline gap-2">
+<span class="text-xl font-black text-stone-900 dark:text-white">₹1,250</span>
+<span class="text-sm font-medium text-stone-400 line-through">₹2,500</span>
+</div>
+<div class="mt-auto">
+<div class="mb-4 flex gap-2">
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">M</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded bg-stone-900 dark:bg-white text-white dark:text-stone-900 text-xs font-bold shadow-md">L</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">XL</span>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-stone-900 dark:bg-white py-3 text-xs font-bold tracking-widest text-white dark:text-stone-900 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-all shadow-lg shadow-stone-900/10 hover:shadow-primary/25 uppercase">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col rounded-lg bg-white dark:bg-surface-dark border border-stone-200 dark:border-stone-800 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-stone-200">
+<img alt="Man wearing a casual striped shirt" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf8ZHgzJUIcnLOLJbjsFE9hxDvT4gOZk8dGYbmwxad17mIlaYV5kFlAPcbtxzsYvd0aEYOuuzKFCLxaZzoqBjhOtcxgiX_4kzQyNOsWckBL_gl3QqOovO9QNhT2VEadoXf5zSIQsYVFqORJbQG5aDC4Q6bQNHkv5DBBMhqP9Zj5Ak6bkqrKRVFS3-bhjIOYUCvQv1RXFv7HegHB2yv89Xw060SrIX3ziy2w02R1Wt_3kAXlyBa5ZHLk_qFf6rYwkcsOgAgBDg0hK4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm text-stone-400 hover:text-red-500 hover:scale-110 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-3">
+<h3 class="truncate text-lg font-bold text-stone-900 dark:text-white group-hover:text-primary transition-colors">Striped Vacation Shirt</h3>
+<p class="text-xs font-medium text-stone-500 dark:text-stone-400 mt-1">Lightweight Viscose</p>
+</div>
+<div class="mb-5 flex items-baseline gap-2">
+<span class="text-xl font-black text-stone-900 dark:text-white">₹899</span>
+</div>
+<div class="mt-auto">
+<div class="mb-4 flex gap-2">
+<span class="flex size-7 cursor-pointer items-center justify-center rounded bg-stone-900 dark:bg-white text-white dark:text-stone-900 text-xs font-bold shadow-md">S</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">M</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">L</span>
+<span class="flex size-7 cursor-pointer items-center justify-center rounded border border-stone-200 dark:border-stone-700 text-xs font-bold text-stone-500 hover:border-primary hover:text-primary dark:text-stone-400 transition-colors">XL</span>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-stone-900 dark:bg-white py-3 text-xs font-bold tracking-widest text-white dark:text-stone-900 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white transition-all shadow-lg shadow-stone-900/10 hover:shadow-primary/25 uppercase">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-16 flex justify-center">
+<nav class="flex items-center gap-3">
+<button class="flex size-11 items-center justify-center rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-surface-dark text-stone-500 dark:text-stone-400 hover:border-primary hover:text-primary hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors disabled:opacity-50">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="flex size-11 items-center justify-center rounded-lg bg-stone-900 dark:bg-white text-white dark:text-stone-900 font-bold shadow-lg shadow-stone-900/10">1</button>
+<button class="flex size-11 items-center justify-center rounded-lg border border-transparent hover:border-stone-200 dark:hover:border-stone-700 text-stone-600 dark:text-stone-300 font-semibold hover:bg-white dark:hover:bg-stone-800 transition-all">2</button>
+<button class="flex size-11 items-center justify-center rounded-lg border border-transparent hover:border-stone-200 dark:hover:border-stone-700 text-stone-600 dark:text-stone-300 font-semibold hover:bg-white dark:hover:bg-stone-800 transition-all">3</button>
+<span class="flex size-11 items-center justify-center text-stone-400 font-bold">...</span>
+<button class="flex size-11 items-center justify-center rounded-lg border border-transparent hover:border-stone-200 dark:hover:border-stone-700 text-stone-600 dark:text-stone-300 font-semibold hover:bg-white dark:hover:bg-stone-800 transition-all">12</button>
+</div>
+<button class="flex size-11 items-center justify-center rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-surface-dark text-stone-500 dark:text-stone-400 hover:border-primary hover:text-primary hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</section>
+</main>
+<footer class="mt-12 border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-surface-dark pt-16 pb-8">
+<div class="mx-auto max-w-[1440px] px-4 lg:px-8 xl:px-12">
+<div class="grid grid-cols-1 gap-12 md:grid-cols-4 lg:gap-8">
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-3 group w-fit" href="#">
+<div class="flex items-center justify-center size-10 rounded-lg bg-stone-900 dark:bg-white text-white dark:text-stone-900 shadow-xl shadow-stone-500/10">
+<svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 4v16"></path>
+<path d="M7 4h6a4 4 0 0 1 0 8H7"></path>
+<path d="M13 12l5 8"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<h2 class="text-xl font-black tracking-tight leading-none text-stone-900 dark:text-white uppercase">Rakesh</h2>
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase leading-tight mt-0.5">Clothing</span>
+</div>
+</a>
+<p class="text-sm leading-relaxed text-stone-500 dark:text-stone-400 max-w-xs">Your trusted destination for quality men's fashion. Casual, formal, and ethnic wear crafted for comfort and style since 1995.</p>
+<div class="flex gap-4">
+<a class="flex size-10 items-center justify-center rounded-full bg-stone-100 dark:bg-stone-800 hover:bg-primary hover:text-white transition-all duration-300 text-stone-600 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+<a class="flex size-10 items-center justify-center rounded-full bg-stone-100 dark:bg-stone-800 hover:bg-primary hover:text-white transition-all duration-300 text-stone-600 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+<a class="flex size-10 items-center justify-center rounded-full bg-stone-100 dark:bg-stone-800 hover:bg-primary hover:text-white transition-all duration-300 text-stone-600 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</a>
+</div>
+</div>
+<div>
+<h3 class="mb-6 text-sm font-bold text-stone-900 dark:text-white uppercase tracking-widest">Collections</h3>
+<ul class="flex flex-col gap-3 text-sm text-stone-600 dark:text-stone-400 font-medium">
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Casual Shirts</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Formal Trousers</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Ethnic &amp; Kurtas</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Denim &amp; Jeans</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Winter Wear</a></li>
+</ul>
+</div>
+<div>
+<h3 class="mb-6 text-sm font-bold text-stone-900 dark:text-white uppercase tracking-widest">Customer Care</h3>
+<ul class="flex flex-col gap-3 text-sm text-stone-600 dark:text-stone-400 font-medium">
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Order Status</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Returns &amp; Exchange</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Size Guide</a></li>
+<li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h3 class="mb-6 text-sm font-bold text-stone-900 dark:text-white uppercase tracking-widest">Newsletter</h3>
+<p class="mb-4 text-sm text-stone-500 dark:text-stone-400">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+<form class="flex flex-col gap-3">
+<input class="w-full rounded-lg bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 px-4 py-2.5 text-sm text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Enter your email" type="email"/>
+<button class="w-full rounded-lg bg-stone-900 dark:bg-white py-2.5 text-sm font-bold text-white dark:text-stone-900 hover:bg-primary dark:hover:bg-primary hover:text-white transition-colors uppercase tracking-wide" type="button">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="mt-16 flex flex-col items-center justify-between gap-4 border-t border-stone-100 dark:border-stone-800 pt-8 md:flex-row">
+<p class="text-sm text-stone-500 dark:text-stone-400 font-medium">© 2023 Rakesh Cloth Store. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

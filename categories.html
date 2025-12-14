@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Categories - Rakesh Cloth Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#334155",
+                        "primary-hover": "#1e293b", 
+                        "accent": "#475569",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "text-main": "#334155",
+                        "text-light": "#64748b",
+                        "text-dark-main": "#f1f5f9",
+                        "text-dark-light": "#94a3b8",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "2xl": "1.5rem", // Consistent rounded aesthetic
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'soft-hover': '0 20px 40px -5px rgba(51, 65, 85, 0.1)',
+                        'glow': '0 0 20px -5px rgba(51, 65, 85, 0.3)',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e293b; 
+        }html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-main dark:text-text-dark-main antialiased selection:bg-slate-300 selection:text-slate-900">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl px-6 sm:px-10 py-4 transition-all duration-300">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-3.5 group select-none" href="#">
+<div class="relative flex items-center justify-center size-11 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-lg shadow-slate-200/50 dark:shadow-none group-hover:scale-105 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
+<span class="material-symbols-outlined text-[26px]">checkroom</span>
+</div>
+<div class="flex flex-col justify-center gap-0.5">
+<h2 class="text-2xl font-bold leading-none tracking-tight text-slate-900 dark:text-white font-display">Rakesh</h2>
+<span class="text-[10px] font-bold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase leading-none">Clothing</span>
+</div>
+</a>
+<label class="hidden lg:flex flex-col min-w-40 h-11 w-[28rem]">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-slate-100 dark:bg-surface-dark/50 border border-slate-200 dark:border-slate-700 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10 transition-all duration-300">
+<div class="text-slate-400 dark:text-slate-500 flex items-center justify-center pl-4 pr-1 rounded-l-full border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-slate-800 dark:text-slate-200 focus:outline-0 border-none bg-transparent h-full placeholder:text-slate-400 dark:placeholder:text-slate-600 px-3 text-sm font-medium leading-normal" placeholder="Search for shirts, jeans, kurtas..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-semibold leading-normal transition-colors relative group" href="#">
+                        Men
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-900 dark:bg-white transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-semibold leading-normal transition-colors relative group" href="#">
+                        Kids
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-900 dark:bg-white transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 text-sm font-bold leading-normal transition-colors" href="#">Sale</a>
+</nav>
+<div class="flex gap-3">
+<button class="relative group flex items-center justify-center rounded-full size-11 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-700 dark:text-slate-200 transition-all duration-300 shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-slate-800 dark:bg-white text-[10px] font-bold text-white dark:text-slate-900 shadow-sm">2</span>
+</button>
+<button class="flex items-center justify-center rounded-full size-11 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-700 dark:text-slate-200 transition-all duration-300 shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex justify-center py-12 px-6 sm:px-10 lg:px-20">
+<div class="flex flex-col max-w-[90rem] flex-1 w-full gap-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 pb-10 border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-4 max-w-2xl animate-fade-in">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white">
+                            Shop by <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-500 dark:from-slate-200 dark:to-slate-400">Category</span>
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed">
+                            Premium menswear and kids' fashion at honest prices. Find exactly what fits your style.
+                        </p>
+</div>
+<div class="flex gap-3 animate-fade-in" style="animation-delay: 100ms;">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-slate-800 dark:hover:border-white text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 shadow-sm text-sm font-semibold">
+<span class="material-symbols-outlined text-lg">tune</span>
+                            Filters
+                        </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-slate-800 dark:hover:border-white text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 shadow-sm text-sm font-semibold">
+<span class="material-symbols-outlined text-lg">sort</span>
+                            Sort
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-10">
+<a class="group relative flex flex-col p-3 rounded-3xl bg-white dark:bg-surface-dark shadow-soft hover:shadow-soft-hover transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 overflow-hidden border border-transparent hover:border-slate-200 dark:hover:border-slate-700" href="#">
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Folded formal shirt with tie" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE9J0xQL0Kjj78J2z-CZ-O-TLjynw21Dtbd59vp4p1FirB3gzceHlj_hdZ_9v0JXNVr_ixIGhchCjL1R8GPhn11yaX9pVBy64r2SgJQ1zW96V4dfJR3HW0uMpQ5Tg_Vm-RtiC_FwzAYlJk4XVZohh5jKo3f15k-sAfp2tq7pAv0bc0TD4P0RC5Dy42wMTxNshN-LAiah4vzb7zmdL7R84Dd8KTQNhYLDGduHteuxJq8-G9S_83zwgAwEjdWKDnRV7J-wpgyYpiqWQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-4 right-4 flex items-center justify-center size-12 rounded-full bg-white text-slate-900 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 shadow-lg">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-5 px-2">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">Shirts</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Formal &amp; Casual Collection</p>
+</div>
+</a>
+<a class="group relative flex flex-col p-3 rounded-3xl bg-white dark:bg-surface-dark shadow-soft hover:shadow-soft-hover transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 overflow-hidden border border-transparent hover:border-slate-200 dark:hover:border-slate-700" href="#">
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="White cotton t-shirt" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQdix4OZh1Qcns7uYPkw-4M06axNgvE73Pfbs9szapwIz-WMtDTbAUhqwM2cbgm9mKFx-59ofYtQfC5HLLkEHtnQrdGcJkG7OFO8exALiFLMbrPKXNf38X6bthI4n6GjWje_cIcSvIGBb0GjhXiY4sCFwaTkcIhHeychlEtVjrz-HEwWQ7up995EO7g9Q6m9_gAZshCBpEPRuoUvjlXd8GXf9pIYdTfOWIS75lQ7tPd4vGyL_w8bme4PznvLNDQDfIPf97mRmHVp4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-4 right-4 flex items-center justify-center size-12 rounded-full bg-white text-slate-900 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 shadow-lg">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-5 px-2">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">T-Shirts</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Polos, Round Necks &amp; More</p>
+</div>
+</a>
+<a class="group relative flex flex-col p-3 rounded-3xl bg-white dark:bg-surface-dark shadow-soft hover:shadow-soft-hover transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 overflow-hidden border border-transparent hover:border-slate-200 dark:hover:border-slate-700" href="#">
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Blue denim jeans" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBieylrVuF8o2sE8nDZqR9-pAiAeBvQaFO8YD6yOcJLX_BazA7cbBw45mEa26JDgkC6Q6SgqxrDhKaxrNiGliJ9XP3mLvfZxfE8x6mQ8GUGtiG7I3ohaBT9--4pFigocKbrZEVRcDHFOlWuGfPgGjliR489AQ4JJRiD9fsjxUxmHHHg5mr8mOwzRd-Us2kOSjXphMd-mBC0eHgzQrwpMb81g1kO_UXHMLqIgygHknycWssOBeo2hWJ51ael3qJpUp3cxEC-uVVI-TA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-4 right-4 flex items-center justify-center size-12 rounded-full bg-white text-slate-900 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 shadow-lg">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-5 px-2">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">Jeans</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Slim, Regular &amp; Comfort Fit</p>
+</div>
+</a>
+<a class="group relative flex flex-col p-3 rounded-3xl bg-white dark:bg-surface-dark shadow-soft hover:shadow-soft-hover transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 overflow-hidden border border-transparent hover:border-slate-200 dark:hover:border-slate-700" href="#">
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Men's trousers" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2eP6Z-sNGnZPL8EH1dEtSt1HP8uiAqnQIJhrkvQilF8-f3UdCI0epj7ztOlzWs1hrIw2vVvgGY8k506gdq2ZkQHYyuv38aPEIGCJIox0WrxKtptGG_cI7mkhdxciZDKBuE78BHRxjGkrbgK9fh0YjCdy5o5KXQgTav7PbtWqfMnbkqQ6D5YySpUn2IgSRNltN5Jh0SyP8GxD3j1q1uUNtBe21H-RSh5QsYAjUJc5cd_sBAdISn0x-phpv3VsNICZAqdCwTYGn8WQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-4 right-4 flex items-center justify-center size-12 rounded-full bg-white text-slate-900 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 shadow-lg">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-5 px-2">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">Pants &amp; Chinos</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Office &amp; Casual Wear</p>
+</div>
+</a>
+<a class="group relative flex flex-col p-3 rounded-3xl bg-white dark:bg-surface-dark shadow-soft hover:shadow-soft-hover transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 overflow-hidden border border-transparent hover:border-slate-200 dark:hover:border-slate-700" href="#">
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Casual shorts" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxRSOyl-Z6J3QV6p-PFM5m3Rt2zdJSg4_nEoDF2CjmNAvde6fRtaMNfICbywGZsGJn-dpcTFBJovk-MMC0wRqD4XB-GkyDiyZvAUFijCXLWHrilW4sgE-Ucqfi0fsIPVLO599-RR3Dd9puuoKTd7iuVQkHmRB6b0mnIkX_2BGPC7qzclOabdFCky1VmIEeAOf1EylMMBfQ7My67fRgFKN_ZhaoK1S9drjcLViIn5umllt_2GOoomjJ6TVCvT6-iKeTVQ88wG5x4fs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-4 right-4 flex items-center justify-center size-12 rounded-full bg-white text-slate-900 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 shadow-lg">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-5 px-2">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">Shorts</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Cargo, Boxer &amp; Bermudas</p>
+</div>
+</a>
+<a class="group relative flex flex-col p-3 rounded-3xl bg-white dark:bg-surface-dark shadow-soft hover:shadow-soft-hover transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 overflow-hidden border border-transparent hover:border-slate-200 dark:hover:border-slate-700" href="#">
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Kids clothing" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqEDVI7wjL37QDHAC4rbCzGVrOXa48Bao5_gkN5BKNz7Yk03-yOsk0CTVeztaU3X5_WgJR4Gd8eQfdMsbxNGCM4Xth1-K_2LcGddvzrqfh1sMIWDoJbrsH-cgydX4wSpkpxhBKHbctiBd_QUZfXMgIncihqD49BJoTaduNrf-s_uhY8uUf2dl3XPr7cmWT813oIcWdE7F677yIBbD6hW-U-tzPTNpkydF73JhW0888gtosw0TqqOhxD9THXaRPzgnFS-p9NfyrtgQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-4 right-4 flex items-center justify-center size-12 rounded-full bg-white text-slate-900 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 shadow-lg">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-5 px-2">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">Kids Wear</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Boys &amp; Girls (Age 0-14)</p>
+</div>
+</a>
+<a class="group relative flex flex-col p-3 rounded-3xl bg-white dark:bg-surface-dark shadow-soft hover:shadow-soft-hover transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 overflow-hidden border border-transparent hover:border-slate-200 dark:hover:border-slate-700" href="#">
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Comfortable innerwear" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMQ0PPqAwIekgjeFiRIQPD7AWRy0JPxPwo2mjhBQ86tAn3RqetOpBTwqxhn4ZM1IhxU41XM3D67SrocdthH9gOF3ounKM6SEW4qPpKMKdB8GlHbomVJLwoEsdWhFBpllN8KkYzHQqiav40hUtUMMhgce7-8XT5vp7IMRIXZdt19JyRR4BYOIemj9ReDocgl12tKtbEMbCmAkOrNwTSPndXNWZkRKe5SKuHJXWvbCvHKz9_dH_u7uG2Z4MWHYQq4i3CWIep_Me7NS8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-4 right-4 flex items-center justify-center size-12 rounded-full bg-white text-slate-900 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 shadow-lg">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-5 px-2">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">Innerwear</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Premium Comfort Vests &amp; Briefs</p>
+</div>
+</a>
+</div>
+</div>
+</main>
+<section class="py-20 bg-slate-50 dark:bg-[#162033] border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center justify-center gap-8 max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+<div class="flex flex-col items-center text-center gap-5 p-8 rounded-3xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700/50 shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 mb-2 transition-transform hover:scale-105 duration-300">
+<span class="material-symbols-outlined text-3xl">currency_rupee</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Best Prices Guaranteed</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed px-4">Direct from manufacturers to give you the best deal in town. No middlemen.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-5 p-8 rounded-3xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700/50 shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 mb-2 transition-transform hover:scale-105 duration-300">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Cash on Delivery</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed px-4">Pay at your doorstep. No hidden charges. Simple &amp; Secure payment.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-5 p-8 rounded-3xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700/50 shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 mb-2 transition-transform hover:scale-105 duration-300">
+<span class="material-symbols-outlined text-3xl">published_with_changes</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Easy Local Returns</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed px-4">Don't like the fit? Return it easily at our store or via pickup within 7 days.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="flex flex-col gap-8 px-10 py-16 bg-white dark:bg-background-dark text-center border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto w-full">
+<div class="flex flex-col items-center md:items-start gap-2 text-left">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-slate-800 dark:text-white">checkroom</span>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Rakesh Cloth Store</h2>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 pl-8">Fashion for men and kids, trusted since 1998.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors" href="#">About Us</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors" href="#">Contact</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors" href="#">Store Location</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex gap-4">
+<a class="size-10 flex items-center justify-center rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="size-10 flex items-center justify-center rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+<a class="size-10 flex items-center justify-center rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div class="text-slate-400 dark:text-slate-600 text-xs pt-8 border-t border-slate-100 dark:border-slate-800 w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+<span>© 2024 Rakesh Cloth Store. All rights reserved.</span>
+<span class="flex items-center gap-1">Made with <span class="material-symbols-outlined text-[14px] text-red-500">favorite</span> in India</span>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rakesh Cloth Store - Men's Fashion Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Dancing+Script:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563eb", // Blue 600
+                        "primary-hover": "#1d4ed8", // Blue 700
+                        "background-light": "#f8fafc", // Slate 50
+                        "background-dark": "#0f172a", // Slate 900
+                        "surface-dark": "#1e293b", // Slate 800
+                        "surface-border": "#334155", // Slate 700
+                        "text-secondary": "#94a3b8", // Slate 400
+                        "text-primary": "#f1f5f9", // Slate 100
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "script": ["Dancing Script", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;scrollbar-width: none;}
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen flex-col">
+<header class="sticky top-0 z-50 border-b border-surface-border bg-background-dark/95 backdrop-blur-md px-4 py-4 md:px-8 lg:px-12 transition-all duration-300">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-6">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-3 group" href="#">
+<div class="flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-surface-dark to-slate-950 border border-surface-border shadow-lg shadow-black/20 group-hover:border-primary/50 group-hover:shadow-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[28px] group-hover:scale-110 transition-transform">checkroom</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-2xl font-black leading-none tracking-tight text-white group-hover:text-primary transition-colors">RAKESH</h2>
+<span class="text-[10px] font-bold uppercase leading-none tracking-[0.35em] text-text-secondary mt-1.5 group-hover:text-white transition-colors">Clothing</span>
+</div>
+</a>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-semibold text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full" href="#">Men</a>
+<a class="text-sm font-semibold text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full" href="#">Boys</a>
+<a class="text-sm font-semibold text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full" href="#">Accessories</a>
+<a class="text-sm font-semibold text-primary hover:text-white transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex flex-1 items-center justify-end gap-5">
+<div class="hidden max-w-xs flex-1 md:block group">
+<div class="flex h-11 w-full items-center rounded-full bg-surface-dark border border-surface-border group-focus-within:border-primary group-focus-within:ring-1 group-focus-within:ring-primary/20 transition-all px-4 shadow-sm">
+<span class="material-symbols-outlined text-text-secondary text-[20px] group-focus-within:text-primary transition-colors">search</span>
+<input class="h-full w-full border-none bg-transparent px-3 text-sm text-white placeholder-text-secondary focus:ring-0" placeholder="Search for shirts, jeans..."/>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="relative flex size-11 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-primary/20">
+<span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+<span class="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white shadow-sm ring-2 ring-background-dark">2</span>
+</button>
+<button class="flex size-11 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-primary/20">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="w-full bg-white relative overflow-hidden">
+<div class="flex flex-col md:flex-row h-full min-h-[600px]">
+<div class="w-full md:w-1/2 flex items-center justify-center p-8 lg:pl-20">
+<div class="flex flex-col items-start max-w-lg">
+<h3 class="font-script text-5xl md:text-6xl text-primary mb-2 transform -rotate-2">Season Sale</h3>
+<h1 class="text-7xl md:text-8xl lg:text-[7rem] font-black uppercase tracking-tight text-slate-900 leading-[0.9] mb-6">
+                            Men's <br/> Fashion
+                        </h1>
+<p class="mb-10 text-2xl md:text-3xl text-slate-600 font-medium">
+                            Min. 35-70% Off
+                        </p>
+<div class="flex flex-wrap gap-5">
+<button class="inline-flex h-14 min-w-[160px] items-center justify-center bg-primary px-8 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-primary-hover shadow-lg shadow-blue-500/30 hover:scale-105">
+                                Shop Now
+                            </button>
+<button class="inline-flex h-14 min-w-[160px] items-center justify-center border-2 border-primary bg-transparent px-8 text-sm font-bold uppercase tracking-wider text-primary transition-all hover:bg-primary/5 hover:scale-105">
+                                Read More
+                            </button>
+</div>
+<div class="mt-16 flex gap-3">
+<button class="flex h-3 w-3 items-center justify-center rounded-full border border-primary p-0.5">
+<div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
+</button>
+<div class="h-3 w-3 rounded-full bg-slate-300"></div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuABKBg5EcaqB-cD4y2FYJR95rJKI1GM3Fcm0w1xrJIPoJmc78nx69bGsYb3OWGpOPWUH4Q651cAx_Jcl3yyx0A1zRkvewjDPnE6SCh9zUl7iS-Ewqh9TTKONv419Z0DXjFh5u1gn-9-b_84Ka3ue-4IXA1O42ptxVjqiDViQmX2HJGs6c7s51VHKJ0f2aRkSByiRXxPdIYnYk0reaLQ8zVjlMyCdOPRRK9m8QECbBYA2yBi-W5ErwMofSNazbQ-5yd_gk4VSv0GC4Q')] bg-cover bg-center min-h-[400px] md:min-h-full">
+<div class="absolute inset-0 bg-gradient-to-tr from-amber-100/20 to-transparent mix-blend-overlay"></div>
+</div>
+</div>
+</section>
+<section class="border-y border-surface-border bg-surface-dark/50 px-4 py-12 md:px-8 lg:px-12 backdrop-blur-sm">
+<div class="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-3">
+<div class="group flex items-start gap-5 rounded-2xl border border-surface-border bg-surface-dark p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-black/20">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px]">verified</span>
+</div>
+<div>
+<h3 class="mb-2 text-lg font-bold text-white tracking-tight">Premium Quality</h3>
+<p class="text-sm text-text-secondary leading-relaxed font-medium">Handpicked fabrics ensured to last long and stay comfortable.</p>
+</div>
+</div>
+<div class="group flex items-start gap-5 rounded-2xl border border-surface-border bg-surface-dark p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-black/20">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px]">currency_rupee</span>
+</div>
+<div>
+<h3 class="mb-2 text-lg font-bold text-white tracking-tight">Best Prices</h3>
+<p class="text-sm text-text-secondary leading-relaxed font-medium">Direct from manufacturers to give you the most affordable rates.</p>
+</div>
+</div>
+<div class="group flex items-start gap-5 rounded-2xl border border-surface-border bg-surface-dark p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-black/20">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px]">handshake</span>
+</div>
+<div>
+<h3 class="mb-2 text-lg font-bold text-white tracking-tight">Local Trust</h3>
+<p class="text-sm text-text-secondary leading-relaxed font-medium">Serving our community with honesty and dedication for over 20 years.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 py-16 md:px-8 lg:px-12">
+<div class="mx-auto max-w-7xl">
+<div class="mb-10 flex items-end justify-between">
+<div>
+<h2 class="text-3xl font-black text-white md:text-4xl tracking-tight mb-2">Shop By Category</h2>
+<p class="text-text-secondary font-medium">Find exactly what you are looking for</p>
+</div>
+<a class="group flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-hover transition-colors" href="#">
+                        View All <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8 lg:gap-10">
+<a class="group flex flex-col items-center gap-5 text-center" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-full border-2 border-surface-border p-1.5 transition-all duration-500 group-hover:border-primary group-hover:shadow-[0_0_30px_rgba(37,99,235,0.3)]">
+<div class="h-full w-full rounded-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Portrait of a man wearing a stylish casual shirt" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo6oLAtIHLCOKD8JwJXh43Eh9XUu7ji_HwnRbO50dMBFd7zjKC7c25YzauCsyL6GmhLVS6xHT9wmYf2PeT2NGvV-Zqjvk_FEx--uF7MF2qZzXDUjUX9jpJwhtEUSBBCLkNv7UYB9i9lKimThu_DBuatSHUng48qno3rn5gPdEiYTJLVmfyJllt18xW3L-pUJ3LNn9DUekxnG-gESs_PXSAOzgDz4uf-1xuKGuLy8u-9HLi9q9QdF5FU7EFZ_GH7AZVIgfSq4xTq-w');"></div>
+</div>
+<span class="text-lg font-bold text-white group-hover:text-primary transition-colors tracking-tight">Men's Wear</span>
+</a>
+<a class="group flex flex-col items-center gap-5 text-center" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-full border-2 border-surface-border p-1.5 transition-all duration-500 group-hover:border-primary group-hover:shadow-[0_0_30px_rgba(37,99,235,0.3)]">
+<div class="h-full w-full rounded-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Formal white shirt for men" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5QQRAz3a1AePXVdc5x0Jwy_43A__9X5huQu22eJBQz3q6IX8zJcqw5xF6CGGDWKIifXCrdyC9qOGuE8WbR7SZs1NGBuYomXF82YAYP5IgsNlU-wcYKHAIQ_mYQRib07Xz31OFIAAPEO9-1jTyPCNU-ZMTCXCP0IsrUaj_yG0vLmWNoo_oVAc0a7wv9xGN0QRvh_4i4im1nifT_l4XQiUGLuItqEFrHmdUqGncwQN067elkzk3zh7BV68ItV2MMq5jPxRAJGx7gQQ');"></div>
+</div>
+<span class="text-lg font-bold text-white group-hover:text-primary transition-colors tracking-tight">Formal Wear</span>
+</a>
+<a class="group flex flex-col items-center gap-5 text-center" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-full border-2 border-surface-border p-1.5 transition-all duration-500 group-hover:border-primary group-hover:shadow-[0_0_30px_rgba(37,99,235,0.3)]">
+<div class="h-full w-full rounded-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Boy wearing stylish clothing" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSd-mikqlldOs9fORdVjpOiRuvW2EFtmOMCOcZO7qgT_X_ekqFR4OXfb7cJh-tDBeDCTyFo9Z_zK3j2m8eZ8C_KJhlFZWpxdCtbDH2nU13jBsgHQe3ooAJm75CiZ2sfXh-9dbWHapojwlX-M65t_F_Cr3R8-PQiF2xghyid6Nxvt6tlu2jLF-sF57K3jqupribpQpZCZrdTkUBmUmcFt3rlLv1thJenth77ZxWFLSnvs29Qp2D0GYTdoQY67-7LYZnqPLm8ykd9rU');"></div>
+</div>
+<span class="text-lg font-bold text-white group-hover:text-primary transition-colors tracking-tight">Boys' Collection</span>
+</a>
+<a class="group flex flex-col items-center gap-5 text-center" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-full border-2 border-surface-border p-1.5 transition-all duration-500 group-hover:border-primary group-hover:shadow-[0_0_30px_rgba(37,99,235,0.3)]">
+<div class="h-full w-full rounded-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Warm winter jacket and sweater collection" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE2r4ngxjSMkAdSUyL5jHP0pBjbF-LPooPCtYf-H_EQdLZfGj9CHlEjX25eGD5rV4u3jhQQIeBz6ccHvLiev0Nelruw8QqoD_PEvhjL3SKBZLzFhh4AA4f8vAkVWADNvdJ23E_yFX3D6zg9rppGrA0uh9rOL6rKp7r8rcKx6Dh_DJvfhSu78j0vJc3JbuhgGF-twcsIdUHbZ7XiScn3jlHRZyvjLfECKHQFNy6XFXKdwV0TQNnb5rHaZuho7r2GHVrFIL8sELnpw0');"></div>
+</div>
+<span class="text-lg font-bold text-white group-hover:text-primary transition-colors tracking-tight">Winter Wear</span>
+</a>
+</div>
+</div>
+</section>
+<section class="px-4 py-8 md:px-8 lg:px-12">
+<div class="mx-auto max-w-7xl">
+<div class="relative w-full overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-800 shadow-2xl shadow-blue-900/20 border border-surface-border">
+<div class="absolute inset-0 z-0 h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-37Vu4qc6iDj2V3cxAQ-Vyi06bJ0Z7fQJV6m5mmyEohXtSVCjy1ETTv8OcIEOcXHCi7740OlZyZ0HOBkcBZseRxljGrs6CdUOm2JTH-Qbo7e1dyD6gklxUtA44sWSCqxUUDECkMPrPYmTSQbQHsjcKp-ltWsFNjl25pBQn1erXpZY0_rh-PewLPJfxXEA7ckGw9Gw0IuTiFTNvMC5FteaJL6f8Zt-cZX2nC59xYEvJmstJt08WAZs_8cTV8T5LhpdkWsTinhYu00');"></div>
+<div class="absolute inset-0 z-10 bg-gradient-to-r from-slate-950/95 via-slate-900/70 to-transparent"></div>
+<div class="relative z-20 flex flex-col items-start justify-center px-8 py-16 md:px-20 md:py-24 lg:w-3/5">
+<div class="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-blue-500/30 ring-1 ring-white/20">
+<span class="material-symbols-outlined text-[16px]">flare</span>
+                            Festival Special
+                        </div>
+<h2 class="mb-6 text-4xl font-black text-white md:text-5xl lg:text-7xl tracking-tighter leading-[1.1]">
+                            Diwali Collection <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">2024</span>
+</h2>
+<p class="mb-10 max-w-lg text-lg font-medium text-slate-300 leading-relaxed">
+                            Celebrate in style with our exclusive ethnic collection for men and boys. Up to 50% off on traditional wear.
+                        </p>
+<button class="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-white px-10 text-base font-bold text-slate-900 transition-all hover:bg-slate-100 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.25)]">
+                            Shop Collection
+                            <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 py-16 md:px-8 lg:px-12 bg-background-dark">
+<div class="mx-auto max-w-7xl">
+<div class="mb-10 flex items-center justify-between">
+<div>
+<h2 class="text-3xl font-black text-white md:text-4xl tracking-tight mb-2">Best Sellers</h2>
+<p class="text-text-secondary font-medium">Top picks loved by our customers</p>
+</div>
+<div class="flex gap-3">
+<button class="flex size-11 items-center justify-center rounded-full border border-surface-border bg-surface-dark text-white hover:bg-surface-border hover:border-slate-500 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex size-11 items-center justify-center rounded-full border border-surface-border bg-surface-dark text-white hover:bg-surface-border hover:border-slate-500 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+<div class="group flex flex-col rounded-2xl bg-surface-dark p-3 transition-all duration-300 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30 border border-transparent hover:border-surface-border">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Men's Designer Kurta" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZkQeimv7phSUxqQxcbMP79Q3qVWY0gmPF-iR0BmA7KIxFwpk-AiDHodCrf3By14jjn0Qn3DGbxh0IUR7kfp_tuPt3_7nK-IjbKwtzRhdqDEThjZG_QaLSl_wqJU5D2DuIq_o6qpDsl63Z_FW_jRYRQIzEfJu6nCGtjgkLczAY5geMpoWV5AHSq-9e7cXqdrMaq8I9XNn_VSF8teVOdWfabhfswjn0ul_xaYuWHDQeAxxXfFSb8GV0eNVeAHh68HPTkB5_OzyyHOg');"></div>
+<div class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/10 p-0 text-white backdrop-blur-md transition-colors hover:bg-white hover:text-red-500 cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-3 pt-5">
+<h3 class="line-clamp-1 text-lg font-bold text-white tracking-tight group-hover:text-primary transition-colors">Royal Blue Kurta</h3>
+<p class="mb-4 text-sm font-medium text-text-secondary">Men's Ethnic</p>
+<div class="mt-auto flex items-center justify-between border-t border-surface-border pt-4">
+<span class="text-xl font-bold text-white">₹ 1,199</span>
+<button class="flex size-10 items-center justify-center rounded-full bg-primary text-white transition-all hover:scale-110 hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col rounded-2xl bg-surface-dark p-3 transition-all duration-300 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30 border border-transparent hover:border-surface-border">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Blue denim jeans for men" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdwKLFXkJZ5FfGEHwxDTfcwYWpo8KDYWhGma8RUC4OmMF70Sz_WXDHNJfUNmGoaVDtYB0jB0_sv7v0RdwINwS91VyP1vJR-M6jc6Jv8AM3dJcCnFiBXzh6caoA86S3ho4r7O-6OdlsBK_BmhiSaOKINE9p-5X2zPZsGc6he_AspS1Gln3VJg3PYbpNVsVsWGVb_C9GM8V1itwFpGwlUCB9WjEMSSmkDMqkQhzAlWarVtArpcg9OQ4SpCjeQ5m5mN0skZuRYkeljIo');"></div>
+<div class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/10 p-0 text-white backdrop-blur-md transition-colors hover:bg-white hover:text-red-500 cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-3 pt-5">
+<h3 class="line-clamp-1 text-lg font-bold text-white tracking-tight group-hover:text-primary transition-colors">Slim Fit Denim Jeans</h3>
+<p class="mb-4 text-sm font-medium text-text-secondary">Men's Wear</p>
+<div class="mt-auto flex items-center justify-between border-t border-surface-border pt-4">
+<span class="text-xl font-bold text-white">₹ 1,299</span>
+<button class="flex size-10 items-center justify-center rounded-full bg-primary text-white transition-all hover:scale-110 hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col rounded-2xl bg-surface-dark p-3 transition-all duration-300 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30 border border-transparent hover:border-surface-border">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Formal white shirt for men" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5QQRAz3a1AePXVdc5x0Jwy_43A__9X5huQu22eJBQz3q6IX8zJcqw5xF6CGGDWKIifXCrdyC9qOGuE8WbR7SZs1NGBuYomXF82YAYP5IgsNlU-wcYKHAIQ_mYQRib07Xz31OFIAAPEO9-1jTyPCNU-ZMTCXCP0IsrUaj_yG0vLmWNoo_oVAc0a7wv9xGN0QRvh_4i4im1nifT_l4XQiUGLuItqEFrHmdUqGncwQN067elkzk3zh7BV68ItV2MMq5jPxRAJGx7gQQ');"></div>
+<div class="absolute left-3 top-3 rounded-md bg-primary/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm backdrop-blur-sm">
+                                Best Seller
+                            </div>
+<div class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-black/20 p-0 text-white backdrop-blur-md transition-colors hover:bg-white hover:text-red-500 cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-3 pt-5">
+<h3 class="line-clamp-1 text-lg font-bold text-white tracking-tight group-hover:text-primary transition-colors">Classic White Shirt</h3>
+<p class="mb-4 text-sm font-medium text-text-secondary">Formal Wear</p>
+<div class="mt-auto flex items-center justify-between border-t border-surface-border pt-4">
+<span class="text-xl font-bold text-white">₹ 799</span>
+<button class="flex size-10 items-center justify-center rounded-full bg-primary text-white transition-all hover:scale-110 hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col rounded-2xl bg-surface-dark p-3 transition-all duration-300 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/30 border border-transparent hover:border-surface-border">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Boys Festive Wear" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSd-mikqlldOs9fORdVjpOiRuvW2EFtmOMCOcZO7qgT_X_ekqFR4OXfb7cJh-tDBeDCTyFo9Z_zK3j2m8eZ8C_KJhlFZWpxdCtbDH2nU13jBsgHQe3ooAJm75CiZ2sfXh-9dbWHapojwlX-M65t_F_Cr3R8-PQiF2xghyid6Nxvt6tlu2jLF-sF57K3jqupribpQpZCZrdTkUBmUmcFt3rlLv1thJenth77ZxWFLSnvs29Qp2D0GYTdoQY67-7LYZnqPLm8ykd9rU');"></div>
+<div class="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-black/20 p-0 text-white backdrop-blur-md transition-colors hover:bg-white hover:text-red-500 cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-3 pt-5">
+<h3 class="line-clamp-1 text-lg font-bold text-white tracking-tight group-hover:text-primary transition-colors">Festive Sherwani Set</h3>
+<p class="mb-4 text-sm font-medium text-text-secondary">Boys' Collection</p>
+<div class="mt-auto flex items-center justify-between border-t border-surface-border pt-4">
+<span class="text-xl font-bold text-white">₹ 1,499</span>
+<button class="flex size-10 items-center justify-center rounded-full bg-primary text-white transition-all hover:scale-110 hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-14 flex justify-center">
+<button class="rounded-full border border-surface-border bg-transparent px-10 py-3.5 text-sm font-bold tracking-wide text-white hover:bg-surface-dark hover:border-primary hover:text-primary transition-all duration-300">
+                        View All Products
+                    </button>
+</div>
+</div>
+</section>
+<section class="px-4 py-16 md:px-8 lg:px-12 bg-surface-dark/30 border-t border-surface-border">
+<div class="mx-auto max-w-7xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">What Our Customers Say</h2>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-dark border border-surface-border rounded-2xl p-8 flex flex-col h-full hover:shadow-xl hover:shadow-black/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-surface-border/20 group-hover:text-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[120px]">format_quote</span>
+</div>
+<div class="flex text-amber-400 mb-6 text-sm relative z-10">
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+</div>
+<p class="text-slate-300 mb-8 flex-grow leading-relaxed italic relative z-10 text-lg">"Excellent quality shirts at very reasonable prices. The fit is perfect for office wear. Highly recommend for men's shopping!"</p>
+<div class="flex items-center gap-4 pt-6 border-t border-surface-border relative z-10">
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center text-white shadow-lg shadow-blue-900/40">
+<span class="text-lg font-bold">VS</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Vikram Singh</h4>
+<p class="text-text-secondary text-sm font-medium">Jabalpur</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-2xl p-8 flex flex-col h-full hover:shadow-xl hover:shadow-black/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-surface-border/20 group-hover:text-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[120px]">format_quote</span>
+</div>
+<div class="flex text-amber-400 mb-6 text-sm relative z-10">
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+</div>
+<p class="text-slate-300 mb-8 flex-grow leading-relaxed italic relative z-10 text-lg">"Best local store for traditional kurtas. I bought a set for Diwali and the fabric quality is top-notch. Will surely visit again."</p>
+<div class="flex items-center gap-4 pt-6 border-t border-surface-border relative z-10">
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center text-white shadow-lg shadow-blue-900/40">
+<span class="text-lg font-bold">RK</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Rajesh Kumar</h4>
+<p class="text-text-secondary text-sm font-medium">Indore</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-2xl p-8 flex flex-col h-full hover:shadow-xl hover:shadow-black/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-surface-border/20 group-hover:text-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[120px]">format_quote</span>
+</div>
+<div class="flex text-amber-400 mb-6 text-sm relative z-10">
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined filled text-[22px]">star</span>
+<span class="material-symbols-outlined text-[22px] text-slate-600">star</span>
+</div>
+<p class="text-slate-300 mb-8 flex-grow leading-relaxed italic relative z-10 text-lg">"Great collection for boys. Found durable jeans for my son. The online shopping experience is smooth and delivery was fast."</p>
+<div class="flex items-center gap-4 pt-6 border-t border-surface-border relative z-10">
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center text-white shadow-lg shadow-blue-900/40">
+<span class="text-lg font-bold">AP</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Amit Patel</h4>
+<p class="text-text-secondary text-sm font-medium">Bhopal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 py-8 md:px-8 lg:px-12 bg-background-dark">
+<div class="mx-auto max-w-7xl">
+<div class="relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-2xl md:rounded-3xl bg-blue-700 p-8 md:flex-row md:px-16 md:py-14 shadow-2xl shadow-blue-900/30">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+<div class="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-blue-500 blur-[80px] opacity-40"></div>
+<div class="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-purple-500 blur-[80px] opacity-30"></div>
+<div class="relative z-10 flex flex-col gap-3 text-center md:text-left">
+<h2 class="text-3xl font-black uppercase italic tracking-tighter text-white md:text-5xl drop-shadow-md">Maha Festival Sale</h2>
+<p class="text-lg font-bold text-blue-100 md:text-xl">Flat 20% OFF on all Ethnic Wear for Men &amp; Boys</p>
+</div>
+<div class="relative z-10">
+<button class="rounded-full bg-slate-900 px-10 py-4 text-lg font-bold text-white transition-all hover:scale-105 hover:bg-slate-950 shadow-xl shadow-blue-900/50 border border-white/10 ring-4 ring-white/10">
+                            Grab Deal Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-surface-border bg-[#0b1120] pt-20 pb-10 text-white">
+<div class="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
+<div class="grid grid-cols-1 gap-12 md:grid-cols-4 lg:gap-16">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-8 group">
+<div class="flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-surface-dark to-slate-950 border border-surface-border shadow-lg shadow-black/20 group-hover:border-primary/50 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[28px]">checkroom</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-2xl font-black leading-none tracking-tight text-white group-hover:text-primary transition-colors">RAKESH</h2>
+<span class="text-[10px] font-bold uppercase leading-none tracking-[0.35em] text-text-secondary mt-1.5 group-hover:text-white transition-colors">Clothing</span>
+</div>
+</div>
+<p class="mb-8 max-w-sm text-text-secondary leading-relaxed font-medium">
+                        Your trusted local destination for men's fashion. We bring you the latest trends at prices that fit your budget, without compromising on quality.
+                    </p>
+<div class="flex gap-4">
+<a class="flex size-11 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 hover:-translate-y-1" href="#">
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="flex size-11 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 hover:-translate-y-1" href="#">
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.53c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<div>
+<h3 class="mb-6 text-sm font-bold uppercase tracking-widest text-white border-b border-primary/50 pb-2 inline-block">Categories</h3>
+<ul class="flex flex-col gap-4 text-text-secondary font-medium">
+<li><a class="hover:text-primary transition-colors hover:pl-1 transition-all" href="#">Men's Wear</a></li>
+<li><a class="hover:text-primary transition-colors hover:pl-1 transition-all" href="#">Formal Wear</a></li>
+<li><a class="hover:text-primary transition-colors hover:pl-1 transition-all" href="#">Boys' Collection</a></li>
+<li><a class="hover:text-primary transition-colors hover:pl-1 transition-all" href="#">Winter Wear</a></li>
+<li><a class="hover:text-primary transition-colors hover:pl-1 transition-all" href="#">New Arrivals</a></li>
+</ul>
+</div>
+<div>
+<h3 class="mb-6 text-sm font-bold uppercase tracking-widest text-white border-b border-primary/50 pb-2 inline-block">Contact Us</h3>
+<ul class="flex flex-col gap-5 text-text-secondary font-medium">
+<li class="flex items-start gap-3">
+<div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-primary">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+</div>
+<span class="mt-1">123, Market Road, Near City Center, Nagpur</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-primary">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</div>
+<span>+91 98765 43210</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-primary">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</div>
+<span>hello@rakeshstore.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-16 border-t border-surface-border/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-secondary font-medium">
+<p>© 2024 Rakesh Cloth Store. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

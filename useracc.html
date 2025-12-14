@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rakesh Cloth Store - My Account</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#334155", // Slate 700
+                        "primary-hover": "#1e293b", // Slate 800
+                        "primary-light": "#f1f5f9", // Slate 100
+                        "secondary": "#0f172a", // Slate 900 - Main brand color
+                        "secondary-hover": "#020617", // Slate 950
+                        "background-light": "#f8fafc", // Slate 50
+                        "background-card": "#FFFFFF",
+                        "surface-highlight": "#f1f5f9", // Slate 100
+                        "text-main": "#0f172a", // Slate 900
+                        "text-muted": "#475569", // Slate 600
+                        "text-subtle": "#94a3b8", // Slate 400
+                        "accent-earth": "#b45309", // Amber 700 - Warm accent
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(15, 23, 42, 0.05)',
+                        'card': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03)',
+                        'glow': '0 0 15px rgba(15, 23, 42, 0.1)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light font-display text-text-main antialiased selection:bg-secondary selection:text-white overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-3 group" href="#">
+<div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary shadow-lg shadow-secondary/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
+<span class="font-display text-2xl font-bold text-white tracking-tighter">R</span>
+<div class="absolute -right-1.5 -top-1.5 h-4 w-4 rounded-full border-[3px] border-white bg-accent-earth shadow-sm"></div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-xl font-bold leading-none tracking-tight text-secondary group-hover:text-primary transition-colors">Rakesh</span>
+<span class="text-[10px] font-bold tracking-[0.25em] text-accent-earth uppercase mt-1.5 ml-0.5">Clothing</span>
+</div>
+</a>
+<div class="hidden md:flex items-center">
+<div class="relative w-80">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-text-subtle text-[20px]">search</span>
+</div>
+<input class="block w-full rounded-full border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-4 text-sm text-text-main placeholder-text-subtle focus:border-secondary focus:bg-white focus:ring-1 focus:ring-secondary transition-all" placeholder="Search for kurtas, shirts, accessories..." type="text"/>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-text-muted hover:text-secondary transition-colors" href="#">Men</a>
+<a class="text-sm font-medium text-text-muted hover:text-secondary transition-colors" href="#">Women</a>
+<a class="text-sm font-medium text-text-muted hover:text-secondary transition-colors" href="#">Kids</a>
+<a class="text-sm font-medium text-accent-earth hover:text-secondary transition-colors" href="#">Sale</a>
+</nav>
+<div class="flex items-center gap-3 pl-6 border-l border-slate-200">
+<button class="relative rounded-full p-2 text-text-muted hover:bg-slate-100 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent-earth text-[10px] font-bold text-white shadow-sm ring-2 ring-white">2</span>
+</button>
+<button class="rounded-full p-2 text-text-muted hover:bg-slate-100 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-10 w-10 overflow-hidden rounded-full border-2 border-slate-100 shadow-sm cursor-pointer hover:border-secondary transition-colors" data-alt="User profile picture placeholder">
+<img alt="User Avatar" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQkFVKb6lv4l-IRB2Deg_RBm-DDIHuKJH9-EYHRJ4bunorcRJEzLJatU4kDXZfuoUheElXJwi0m2Sj-fvj7st7w4c0nBYPO-KSNJJE8G-ZA-FachyKbjUQx9U1cD-FlbeYbNj2uLogLOK6RdvW3PEwH-VJ9-nKs3eomBgdgW4u6b8TsjCDNa5k-E42QeJVF0OQ0ya7x9n2fCzSjrolzESKoQLyiCIJm2-IuV6JjnisM4bmwMrjhg3nuzGIz_D6QOVmfYZtJLHQRBs"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 md:px-8">
+<div class="flex flex-col gap-8 lg:flex-row lg:gap-10">
+<aside class="w-full lg:w-72 shrink-0 space-y-8">
+<div class="flex items-center gap-4 rounded-2xl bg-white p-5 border border-slate-200 shadow-sm">
+<div class="h-14 w-14 overflow-hidden rounded-full border-2 border-slate-100 shadow-inner">
+<img alt="Profile Picture" class="h-full w-full object-cover" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtR8T4bQuaKrZxoFFAoFhv62QchnSfBhBdJIGiQAlMcncU91Em8WyqHn8Ycyoklj2Feg7OJe3ta2byzhIeav5SzUl9TlYcpOV2GddfQSKWmSAh08HnXqSePxaFLFJ_TFPteUf-qge3Wdz_5pIYCNDXI_pdHPjrI9fmi88RwIwvJk1NpCayQSQNrBclAFjM1XyxGibAQxmgHDsZvI-UIWXaAifmb95wNK9yGm1NbKSn5Bn3WTfCPRq--LmaWQAfcGsCa5pbUxK3O9E"/>
+</div>
+<div class="flex flex-col">
+<h2 class="text-base font-bold text-secondary">Rakesh Kumar</h2>
+<p class="text-xs text-text-muted font-medium mt-0.5">+91 98765 43210</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-xl bg-secondary text-white px-4 py-3.5 text-sm font-medium shadow-lg shadow-secondary/20 ring-1 ring-secondary" href="#">
+<span class="material-symbols-outlined text-[20px]">person</span>
+                        My Profile
+                    </a>
+<a class="flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-text-muted transition-all hover:bg-white hover:text-secondary hover:shadow-sm hover:ring-1 hover:ring-slate-200" href="#">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                        My Orders
+                    </a>
+<a class="flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-text-muted transition-all hover:bg-white hover:text-secondary hover:shadow-sm hover:ring-1 hover:ring-slate-200" href="#">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+                        Saved Addresses
+                    </a>
+<a class="flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-text-muted transition-all hover:bg-white hover:text-secondary hover:shadow-sm hover:ring-1 hover:ring-slate-200" href="#">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+                        Wishlist
+                        <span class="ml-auto flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-slate-100 px-1.5 text-[10px] font-bold text-text-muted border border-slate-200">4</span>
+</a>
+<div class="my-3 border-t border-slate-200 mx-2"></div>
+<a class="flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-medium text-red-600 transition-all hover:bg-red-50 hover:text-red-700" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                        Logout
+                    </a>
+</nav>
+<div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 text-center">
+<span class="material-symbols-outlined mb-2 text-3xl text-primary/40">verified_user</span>
+<p class="text-xs font-medium text-text-muted leading-relaxed">Your data is encrypted. <br/>100% Secure Payments.</p>
+</div>
+</aside>
+<main class="flex-1 space-y-10">
+<div class="space-y-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-2xl font-bold tracking-tight text-secondary">My Profile</h1>
+<p class="text-text-muted">Manage your personal information and account security.</p>
+</div>
+<div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
+<div class="mb-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center border-b border-slate-100 pb-8">
+<div class="flex items-center gap-6">
+<div class="relative group cursor-pointer">
+<div class="h-24 w-24 overflow-hidden rounded-full ring-4 ring-slate-50 border border-slate-200 shadow-sm transition-transform group-hover:scale-105">
+<img alt="Profile Picture Large" class="h-full w-full object-cover" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe9XizumIwdgz3ZOWHvhpVnO_gBXgA-f4fwHl4d165LYGK3GWqeFbrLPJ7wh--kg-8KRJXSYsZWv3hZGMww1PDfjES40Mr1u2U-QemfBsJedy9P3rvT9fjHb2wYM8pK8_6bkPyHSJtARfuAT17e1PGHcHpgEOW5cbVSql6QLPUdKnp5c_7Xox4GuYU-Jnubo7-1OiCQTAi0EFwLlJSQTwWdDve7jGLGLJKzfd3qNd6ypvRDKOwMLokL-4sRWOFoujugbakxvsvWbY"/>
+</div>
+<div class="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-white ring-2 ring-white shadow-md transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-[14px]">edit</span>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-secondary">Rakesh Kumar</h3>
+<div class="flex items-center gap-3 mt-1.5">
+<p class="text-sm text-text-muted">Member since 2021</p>
+<span class="h-1 w-1 rounded-full bg-slate-300"></span>
+<div class="flex items-center gap-1 rounded-full bg-amber-50 border border-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px] fill-current">star</span>
+                                            Gold
+                                        </div>
+</div>
+</div>
+</div>
+<button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-text-main shadow-sm transition-all hover:bg-slate-50 hover:border-slate-400 hover:text-secondary">
+                                Change Password
+                            </button>
+</div>
+<form class="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
+<label class="block space-y-2">
+<span class="text-sm font-medium text-text-main">Full Name</span>
+<input class="block w-full rounded-lg border-slate-300 bg-white px-4 py-2.5 text-text-main placeholder-text-subtle focus:border-secondary focus:ring-1 focus:ring-secondary shadow-sm transition-all" type="text" value="Rakesh Kumar"/>
+</label>
+<label class="block space-y-2">
+<span class="text-sm font-medium text-text-main">Phone Number</span>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-text-muted text-sm font-medium border-r border-slate-200 pr-2 my-2">+91</span>
+<input class="block w-full rounded-lg border-slate-300 bg-white py-2.5 pl-14 pr-4 text-text-main placeholder-text-subtle focus:border-secondary focus:ring-1 focus:ring-secondary shadow-sm transition-all" type="tel" value="98765 43210"/>
+</div>
+</label>
+<label class="block space-y-2">
+<span class="text-sm font-medium text-text-main">Email Address</span>
+<input class="block w-full rounded-lg border-slate-300 bg-white px-4 py-2.5 text-text-main placeholder-text-subtle focus:border-secondary focus:ring-1 focus:ring-secondary shadow-sm transition-all" type="email" value="rakesh.kumar@example.com"/>
+</label>
+<label class="block space-y-2">
+<span class="text-sm font-medium text-text-main">Date of Birth</span>
+<input class="block w-full rounded-lg border-slate-300 bg-white px-4 py-2.5 text-text-main placeholder-text-subtle focus:border-secondary focus:ring-1 focus:ring-secondary shadow-sm transition-all" type="date" value="1990-05-15"/>
+</label>
+<div class="col-span-1 md:col-span-2 pt-6 flex justify-end">
+<button class="inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-8 py-3 text-sm font-bold text-white shadow-lg shadow-secondary/20 transition-all hover:bg-secondary-hover hover:shadow-secondary/30 active:scale-95" type="button">
+                                    Save Changes
+                                </button>
+</div>
+</form>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-xl font-bold text-secondary">Recent Orders</h2>
+<a class="text-sm font-semibold text-secondary hover:underline flex items-center gap-1" href="#">
+                            View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:shadow-md hover:border-slate-300">
+<div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-xl border border-slate-100 bg-slate-50" data-alt="Light blue cotton kurta for men">
+<img alt="Product Image" class="h-full w-full object-cover transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlUfXKTjrIACupH5okPphuttG3vFtFANWr9aqBGp1G35pry1o2Zsvfor9Sc8zvFEAOpGzbiToGdX7J3Pa20QwE9WL5oXdxLJcc4tt6VhHt6f9UD6Mrv791594-PcmMS6Mr00VvOaj_MAg0f6Pjaaw4aRA85or9VwTvVAkh1YZjnroyMTx9h6gQlAWu5pC4FcXKzMzKrcLKSZ1pd9DasYNqOPLjRl43eQe0b5Pz5Zi8kD1EJJLs_3HdozU0RQ0d4EsYkS5niKTzFP4"/>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-3">
+<div class="flex flex-wrap items-start justify-between gap-2">
+<div>
+<h3 class="font-bold text-secondary text-lg">Cotton Kurta Set - Blue</h3>
+<p class="text-sm text-text-muted mt-0.5">Size: L • Qty: 1</p>
+</div>
+<span class="text-lg font-bold text-secondary">₹899</span>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-700 uppercase tracking-wide">
+<span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                            Delivered
+                                        </span>
+<span class="text-xs font-medium text-text-subtle">Order #RCS-99281</span>
+</div>
+</div>
+<div class="flex flex-row sm:flex-col gap-2 w-full sm:w-auto mt-2 sm:mt-0 pt-4 sm:pt-0 border-t sm:border-0 border-slate-100">
+<button class="flex-1 sm:flex-none justify-center whitespace-nowrap rounded-lg bg-secondary px-5 py-2 text-sm font-bold text-white shadow-sm hover:bg-secondary-hover transition-colors">
+                                        Track Order
+                                    </button>
+<button class="flex-1 sm:flex-none justify-center whitespace-nowrap rounded-lg border border-slate-200 px-5 py-2 text-sm font-semibold text-text-muted hover:bg-slate-50 hover:text-text-main transition-colors">
+                                        Invoice
+                                    </button>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:shadow-md hover:border-slate-300">
+<div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-xl border border-slate-100 bg-slate-50" data-alt="Silk saree with gold border">
+<img alt="Product Image" class="h-full w-full object-cover transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh4rB9jKGgjHw89_flixIiGRV2Ku6uIv09GHWxFQ0PrrcklHQltUEPKKjZPlHxIP8LHR5SaUNKZSUqbzRWl4A7C5PRyTwthpIJ-RJCaEXrzZ4hemvSou3opQWsS8dI5VsZODSzFij4DzLE_16zcInS7IP40EJQKk9TAwfvZW37EI6nnnt3YtSekFISIBgwg0lalaBggwHYr8_JvfdO6DsIlyKhABhP0Y0Ac1JTsT-HtdAPlGQzdiMd8opz-RJPRn-XeSf_l_7z3Iw"/>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-3">
+<div class="flex flex-wrap items-start justify-between gap-2">
+<div>
+<h3 class="font-bold text-secondary text-lg">Banarasi Silk Saree - Red</h3>
+<p class="text-sm text-text-muted mt-0.5">Size: Free • Qty: 1</p>
+</div>
+<span class="text-lg font-bold text-secondary">₹2,499</span>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<span class="inline-flex items-center gap-1.5 rounded-full bg-sky-50 border border-sky-100 px-2.5 py-0.5 text-xs font-bold text-sky-700 uppercase tracking-wide">
+<span class="relative flex h-1.5 w-1.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-sky-500"></span>
+</span>
+                                            On the way
+                                        </span>
+<span class="text-xs font-medium text-text-subtle">Order #RCS-99102</span>
+</div>
+</div>
+<div class="flex flex-row sm:flex-col gap-2 w-full sm:w-auto mt-2 sm:mt-0 pt-4 sm:pt-0 border-t sm:border-0 border-slate-100">
+<button class="flex-1 sm:flex-none justify-center whitespace-nowrap rounded-lg bg-secondary px-5 py-2 text-sm font-bold text-white shadow-sm hover:bg-secondary-hover transition-colors">
+                                        Track Order
+                                    </button>
+<button class="flex-1 sm:flex-none justify-center whitespace-nowrap rounded-lg border border-slate-200 px-5 py-2 text-sm font-semibold text-text-muted hover:bg-slate-50 hover:text-text-main transition-colors">
+                                        Invoice
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-xl font-bold text-secondary">Saved Addresses</h2>
+<button class="flex items-center gap-1.5 text-sm font-bold text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+                            Add New
+                        </button>
+</div>
+<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+<div class="relative flex flex-col justify-between rounded-2xl border-2 border-secondary bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+<div class="absolute right-4 top-4 rounded-full bg-secondary px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Default</div>
+<div>
+<div class="mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">home</span>
+<h3 class="font-bold text-text-main text-lg">Home</h3>
+</div>
+<p class="text-sm leading-relaxed text-text-muted">
+                                    12/B, Green Park Society, Near City Garden,<br/>
+                                    Civil Lines, Meerut, Uttar Pradesh - 250001
+                                </p>
+<p class="mt-3 text-sm font-medium text-text-main">+91 98765 43210</p>
+</div>
+<div class="mt-6 flex gap-4 border-t border-slate-100 pt-4">
+<button class="text-xs font-bold text-secondary hover:underline">Edit</button>
+<button class="text-xs font-bold text-red-600 hover:text-red-800 hover:underline">Delete</button>
+</div>
+</div>
+<div class="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-slate-300">
+<div>
+<div class="mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-text-subtle">work</span>
+<h3 class="font-bold text-text-main text-lg">Work</h3>
+</div>
+<p class="text-sm leading-relaxed text-text-muted">
+                                    Shop No. 45, Rakesh Cloth Store Head Office,<br/>
+                                    Main Market, Meerut, Uttar Pradesh - 250002
+                                </p>
+<p class="mt-3 text-sm font-medium text-text-main">+91 98765 43210</p>
+</div>
+<div class="mt-6 flex gap-4 border-t border-slate-100 pt-4">
+<button class="text-xs font-bold text-secondary hover:underline">Edit</button>
+<button class="text-xs font-bold text-red-600 hover:text-red-800 hover:underline">Delete</button>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-xl font-bold text-secondary">Wishlist</h2>
+<a class="text-sm font-semibold text-secondary hover:underline" href="#">View All (4)</a>
+</div>
+<div class="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+<div class="group relative rounded-xl bg-white overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+<div class="aspect-[3/4] w-full bg-slate-100 overflow-hidden relative" data-alt="Traditional printed sherwani">
+<img alt="Wishlist Item" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDogweZ9BZd7iA1fHZFk8OBIa-t1FAVH700snWS4khumGyMQMIJa9_BVRIycQk1UgHo4rI5-a0yqAlqmlnCqwIl5LbF3j3RtBEhUVZiW_JcWI-cXLlGpAgmygbuYlXBAZ1_mDleQXe8QA6OYq3D2DtvU8Es-9Av2Pby7AcD0R-1vSUfS-7TKsQg08IowBaP74gLssOLh_3-o0uaLlp0ek28B7eV9hM-v1s44yX3DCdftbaw_hKnAtXdito4VVz2fl1jF450TMQKRgs"/>
+<button class="absolute top-2 right-2 p-1.5 rounded-full bg-white/90 backdrop-blur text-text-muted hover:bg-red-50 hover:text-red-600 shadow-sm transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex justify-center">
+</div>
+</div>
+<div class="p-3">
+<h4 class="text-sm font-medium text-text-main truncate">Floral Print Sherwani</h4>
+<p class="text-sm font-bold text-secondary mt-1">₹3,499</p>
+<button class="w-full mt-3 rounded-lg bg-white border border-secondary text-secondary hover:bg-secondary hover:text-white py-2 text-xs font-bold transition-colors uppercase tracking-wide">Add to Cart</button>
+</div>
+</div>
+<div class="group relative rounded-xl bg-white overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+<div class="aspect-[3/4] w-full bg-slate-100 overflow-hidden relative" data-alt="Denim jacket for men">
+<img alt="Wishlist Item" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-DCVdEbtg3bvwyLIGi48E6wmpHtsBk4eKNr5PU_H_ogNxe2Di2oZDBVLZZB9QoVJdxakS0HrnQC7XaJgTwleBkv5j9O1GhE477o4E9eubEA8ctmleMcCoyAcj1Fq5QH069911KtnhOsradOraczaCJBNhiLmC3KGVTALiUYvOUjofMjBMBOoS606JMpuZOKwkF-2lGz3nHfYHmpZ4UPwgzYWhjpo93xArcoBy1jL7_z28XXgZ2gMqC1FBrcoELlkbhbsoRCNfwrw"/>
+<button class="absolute top-2 right-2 p-1.5 rounded-full bg-white/90 backdrop-blur text-text-muted hover:bg-red-50 hover:text-red-600 shadow-sm transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="text-sm font-medium text-text-main truncate">Classic Denim Jacket</h4>
+<p class="text-sm font-bold text-secondary mt-1">₹1,299</p>
+<button class="w-full mt-3 rounded-lg bg-white border border-secondary text-secondary hover:bg-secondary hover:text-white py-2 text-xs font-bold transition-colors uppercase tracking-wide">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
